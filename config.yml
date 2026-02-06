@@ -1,0 +1,31 @@
+# Apito Email Plugin Configuration
+plugin:
+  id: "hc-email-plugin"
+  language: "go"
+  title: "Apito Email Service Plugin"
+  icon: "https://raw.githubusercontent.com/apito-io/hc-email-plugin/main/logo.png"
+  description: "SendGrid, Mailgun, and SMTP support"
+  type: "system"
+  role: ""
+  enable: true
+  debug: false
+  version: "1.0.0"
+  author: "Apito"
+  repository_url: "https://github.com/apito-io/hc-email-plugin"
+  branch: "main"
+  graphql_schema_config:
+    queries: []
+    mutations: []
+  rest_api_config: []
+  binary_path: "hc-email-plugin"
+  handshake_config:
+    protocol_version: 1
+    magic_cookie_key: "APITO_PLUGIN"
+    magic_cookie_value: "apito_plugin_magic_cookie_v1"
+  env_vars:
+    - key: "EMAIL_PROVIDER"
+      value: "sendgrid"
+    - key: "SENDGRID_API_KEY"
+      value: ""
+    - key: "MAILGUN_API_KEY"
+      value: ""
